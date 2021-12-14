@@ -1,0 +1,93 @@
+{
+    "my_college_degrees": [
+        {
+            "degree": {
+                "School": "University of Rochester",
+                "Program": "Environmental Science",
+                "Type": "BA",
+                "Year": 2016
+            }
+        },
+        {
+            "degree": {
+                "School": "Boston University",
+                "Program": "Computer Information Systems",
+                "Type": "MA",
+                "Year": 2023
+            }
+        }
+    ],
+    "work_history": [
+        {
+            "Job": {
+                "Title": "Digital Media Specialist",
+                "Years": "2014-2016",
+                "Location": "Rochester, NY",
+                "Company": "University of Rochester",
+                "Description": [
+                    "Assisted hundreds of University of Rochester students in the use of Adobe suite software, 3D printing software, and Makerbot 3D printers.",
+                    "Maintained and secured the equipment in the Rettner Media Library at the University of Rochester."
+                ]
+            }
+        },
+        {
+            "Job": {
+                "Title": "Manufacturing Team Lead",
+                "Years": "2016-2019",
+                "Location": "Chestnut Hill, MA",
+                "Company": "Liquid Sky Technologies",
+                "Description": [
+                    "Developed and maintained technical documents detailing the manufacturing process of the company's flagship products (Electric Vehicle Charging Stations).",
+                    "Reduced production overhead by 15% by streamlining the assembly process.",
+                    "Trained three junior manufacturing associates.",
+                    "Resolved product quality issues through effective customer care.",
+                    "Grew the company's three largest customers by 10% over a one-year time period."
+                ]
+            }
+        },
+        {
+            "Job": {
+                "Title": "Cybersecurity Analyst",
+                "Years": "2020-present",
+                "Location": "Lexington, MA",
+                "Company": "MIT Lincoln Laboratory",
+                "Description": [
+                    "Established internal documentation standards for threat hunting and vulnerability patching processes.",
+                    "Developed and maintained documentation used for federal CMMC security compliance.",
+                    "Created Python Automation scripts for security report generation.",
+                    "Performed security analysis on Splunk Enterprise Security and Elasticsearch Data.",
+                    "Analyzed hundreds of potential cyber threats from an 8000+ user base.",
+                    "Assisted in the implementation of  SEIM tools to safeguard MITLL's information assets."
+                ]
+            }
+        }
+    ],
+    "leadership_experience": [
+        {
+            "experience": {
+                "Title": "Head Swim Coach",
+                "Years": "2026-2018",
+                "Location": "Brighton, MA",
+                "Company": "Oak Square YMCA ",
+                "Description": [
+                    "Lead a team of 15+ adult athletes.",
+                    "Motivated over 50% of athletes to reach new person records.",
+                    "Organized and managed team excursions to regional competitions."
+                ]
+            }
+        },
+        {
+            "experience": {
+                "Title": "Concertmaster",
+                "Years": "2016",
+                "Location": "Cambridge, MA",
+                "Company": "Harvard Summer Orchestra",
+                "Description": [
+                    "Planned and lead section workshops of 15+ musicians.",
+                    "Coordinated intricate details such as bowings and fingerings amongst multiple sections in the orchestra. ",
+                    "Conveyed musical ideas and integrity through non-verbal communication."
+                ]
+            }
+        }
+    ]
+}

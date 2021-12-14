@@ -1,123 +1,200 @@
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #d7fff1;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    text-align: center;  
-    padding-top: 70px;
-    padding-bottom: 40px;
+  background-color: #f4e3b2;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 40px;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 p {
-
-    font-size: 16pt;
+  font-size: 16pt;
 }
 
-header, footer {
-    width: 100%;
-    position: fixed;        
-    background: #AAFCB8;
-    padding: 10px 0;
-    color: #77AF9C;
+header,footer {
+  width: 100%;
+  background: #efc88b;
+  color: #47624f;
+  padding: 10px 0;
 }
 
-header {top: 0;}
-
-header h1 {
-    float: left;
-    padding: 10px;
-    margin: 0;
-    font-size: medium;
-    text-decoration: none;
-}
-
-h1, h3, h4 {
-    padding: 0px;
-    color: #285943;
-}
-
-h1 {
-    font-size: 30pt;
-}
-
-h3 {
-    font-size: 20pt;
+header {
+  top: 0;
+  position: fixed;
+  
 }
 
 footer {
-    bottom:0;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: .7em;
+  padding: 0;
+  
 }
 
-nav a{
-    color: #77AF9C;
-    text-decoration: none;
-    padding: 10px;
-    float: right;
+.nav-toggle {
+  display: none;
 }
 
-.container {
-    width: 95%;
-    margin: 0 auto;
-    color: #285943;
+header h1 > a {
+  color: #cf5c36;
+  text-decoration: none;
+  padding: 4px;
+  float: left;
+  font-weight: 800;
+  margin: 0;
+  font-size: x-large;
+}
+
+h1,
+h3,
+h4 {
+  padding: 0px;
+  color: #cf5c36;
+}
+
+h1.title {
+  margin-top: 50px;
+}
+
+h3 {
+  font-size: 20pt;
+}
+
+nav a {
+  color: #cf5c36;
+  text-decoration: none;
+  padding: 10px;
+  float: right;
+  font-weight: 800;
+  margin: 0;
+}
+
+nav {
+  padding-right: 1rem;
+}
+nav > ul > li > a.active-page {
+  background-image: linear-gradient(to bottom, transparent 10%, #d3d5d7 150%);
+}
+
+.header-bar {
+  width: 95%;
+  margin: 0 auto;
+  color: #cf5c36;
+  text-decoration: none;
+  float: right;
+  font-weight: 800;
 }
 
 .grid-container {
-    display: grid;
-    background-color: #d7fff1;
+  display: grid;
+  padding: 10px;
+  grid-gap: 1rem;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 80%;
+  border-bottom: 5px solid #050517;
+}
+
+#line1 {
+  width: 20%;
+}
+
+@media (max-width: 35em) {
+  nav {
+    position: fixed;
+    inset: 0 0 0 60%;
+    flex-direction: column;
+    padding: min(10vh, 10rem) 2em;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  nav[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    color: #cf5c36;
+    background-color: #d3d5d7;
+    z-index: 9999;
+    object-fit: contain;
+    top: 1rem;
+    right: 2rem;
+    border: 0;
+    text-decoration: none;
     padding: 10px;
-    grid-gap: 1rem;
+    float: right;
+    font-weight: 800;
+    margin-top: 1rem;
+    }
 }
 
 @media (min-width: 700px) {
-    .grid-container { grid-template-columns: repeat(2, 1fr); }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
 @media (min-width: 1200px) {
-    body p {
-        font-size: 105%;
-    }
-    body h3 {
-        font-size: 110%;
-    }
-    header h1 {
-        font-size: 110%;
-    }
+  body p {
+    font-size: 105%;
+  }
+  body h3 {
+    font-size: 110%;
+  }
+  header h1 {
+    font-size: 110%;
+  }
 }
 
 .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #d7fff1;
-    padding: 20px;
-    font-size: 30px;
-    padding: 10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  font-size: 30px;
+  padding: 10px;
 }
 
 .item1 {
-    grid-column: 1 / span 2;
-    justify-items: center;
-    background-color: #d7fff1;
-    padding: 20px;
-    font-size: 30px;
-    padding: 10px;  
+  grid-column: 1 / span 2;
+  justify-items: center;
+  padding: 20px;
+  font-size: 30px;
+  padding: 10px;
 }
 
 img {
-    display: block;
-    max-width: 80%;
-    height: auto;
-    border-radius: 10%;
-  }
+  display: block;
+  max-width: 80%;
+  height: auto;
+  border-radius: 10%;
+  margin: 30px;
+}
 
 video {
   display: block;
@@ -127,5 +204,163 @@ video {
 }
 
 
+/* CSS for form */
 
+#form {
+    float: center;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 50rem;
+  }
 
+.input {
+    display: flex;
+    justify-content: right;
+}
+
+label {
+    font-size: 12pt;
+    margin: auto;
+   
+}
+
+input[type="submit"] {
+    background-color: #CF5C36;
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    margin: 30px 2px;
+    cursor: pointer;
+  }
+  
+input[type="text"] {
+    width: 80%;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border: 2px solid #a3bcf9;
+    border-radius: 4px;
+    
+}
+
+input[type="text"]:focus {
+    background-color: #d1d2f9;
+}
+
+textarea {
+    width: 79%;
+}
+
+/* CSS for Resume Table */
+
+#button-div {
+    padding: 2em 3em 3em;
+}
+
+#table-div {
+    width: 80%;
+    margin: auto;
+}
+
+#resume_table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+#resume_table td, #resume_table th {
+    border: 1px solid #1D4E89;
+    padding: 8px;
+  }
+
+#resume_table thead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #cf5c36;
+    border: 1px solid white;
+    color: white;
+}
+
+.resume-buttons {
+    background-color: #cf5c36;
+    border: none;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px
+  }
+
+.resume-buttons:hover {
+    background-color: #4a80c2;
+    border: none;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px 
+}
+
+.resume-buttons:disabled {
+    background-color: #D3D5D7;
+    border: none;
+    color: rgb(95, 91, 91);
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px 
+}
+
+/* Vue carousel */
+
+  #app {
+    border-radius: 4px;
+    padding: 5px;
+    transition: all 0.2s;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1px 0;
+    transition: all .3s;
+    margin: auto;
+  }
+
+  .carousel-controls {
+    margin-top: 30px;
+  }
+  
+  .carousel-controls__button {
+    cursor: pointer;
+    background: #cf5c36;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 18px;
+  }

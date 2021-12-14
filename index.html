@@ -2,32 +2,39 @@
 <html lang="en">
 
 <head>
-    <title>Luke Piscitelli</title>
+    <title>Luke Piscitelli | Home</title>
     <link href="main.css" rel="stylesheet">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Profile Luke Piscitelli Personal Website">
+    <meta name="Home" content="Luke Piscitelli's Personal Website">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/nav.js" defer></script>
 
 </head>
 
 <body>
-
+    
     <header>
-        <div class="container">
-            <h1><a href="index.html">Luke Piscitelli</a></h1>
-            <nav>
+        <div class="header-bar">
+            <h1><a href="index.html">LP</a></h1>
+            <button class="nav-toggle" aria-controls="nav" aria-expanded="false">Menu</button>
+            <nav data-visible="false">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">My Projects</a></li>
+                    <li><a href="index.html"  class='active-page'>Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                     <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
                 </ul>
             </nav>
         </div>
     </header>
 
-    <h1>Home</h1>
+    <h1 class="title">Home</h1>
+    <div id="line1" class="line"></div>
 
     <div class="grid-container">
 
@@ -44,6 +51,8 @@
             <img src="media/face.jpeg" alt="Picture of Luke Piscitelli">
         </div>
     </div>
+
+    <div id="line2" class="line"></div>
 
     <div class="grid-container">
 

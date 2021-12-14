@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Luke Piscitelli | Gallery</title>
+    <link href="main.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="gallery" content="picture gallery">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/nav.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-bar">
+            <h1><a href="index.html">LP</a></h1>
+            <button class="nav-toggle" aria-controls="nav" aria-expanded="false">Menu</button>
+            <nav data-visible="false">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="gallery.html" class='active-page'>Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1 class="title">Gallery</h1>
+    <div id="line1" class="line"></div>
+
+
+    <div id="app">
+        <!-- Vue App -->
+        <div class="carousel-container">
+
+            <div class='carousel-controls'>
+            <!-- Controls for the slideshow-->
+                <button class='carousel-controls__button' @click="previous">&#60;</button>
+                <button class='carousel-controls__button' @click="next">&#62;</button>
+            </div>
+            <!-- using a vue for loop to loop through the array -->
+            <transition-group class='carousel' tag="div">
+                <div v-for="slide in slides" class='slide' :key="slide.id"> 
+                    <img :src="slide.media" alt="Picture of Luke"/>
+                </div>
+            </transition-group>
+            
+        </div>
+
+    </div>
+
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- Vue Instance -->
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+
+                // imagaes and tags for each slide
+                slides: [
+                    {
+                        title: 'Slide 1',
+                        id: 1,
+                        media: "media/gallery_photos/luke1.jpeg"
+                    },
+                    {
+                        title: 'Slide 2',
+                        id: 2,
+                        media: "media/gallery_photos/luke2.jpeg"
+                    },
+                    {
+                        title: 'Slide 3',
+                        id: 3,
+                        media: "media/gallery_photos/luke3.jpeg"
+                    },
+                    {
+                        title: 'Slide 4',
+                        id: 4,
+                        media: "media/gallery_photos/luke4.jpeg"
+                    },
+                    {
+                        title: 'Slide 5',
+                        id: 5,
+                        media: "media/gallery_photos/luke5.jpeg"
+                    }
+                ]
+            },
+            methods: {
+
+                next() {
+                    // uses array method shift() to remove first element in array
+                    const first = this.slides.shift();
+                    this.slides = this.slides.concat(first);
+                },
+                previous() {
+                    // uses array method pop() to remove last element in array
+                    const last = this.slides.pop();
+                    this.slides = [last].concat(this.slides);
+                }
+            }
+        })
+    </script>
+
+
+    <footer>
+        <div class="container">Site by Luke Piscitelli 2021</div>
+    </footer>
+
+
+</body>

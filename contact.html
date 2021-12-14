@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Luke Piscitelli | Contact</title>
+    <link href="main.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="contact" content="Contact page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/nav.js" defer></script>
+    <script src="js/form.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-bar">
+            <h1><a href="index.html">LP</a></h1>
+            <button class="nav-toggle" aria-controls="nav" aria-expanded="false">Menu</button>
+            <nav data-visible="false">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class='active-page'>Contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <h1 class="title">Contact</h1>
+    <div id="line1" class="line"></div>
+
+
+    <div id="form" class="grid-container">
+
+        <div class="grid-item">
+            <form name="form" action="https://hur-form-api.herokuapp.com/api/" method="POST" novalidate
+                onsubmit="return validateForm();">
+
+                <span class=input>
+                    <label for="firstName">First name:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </span>
+                <br>
+
+                <span class=input>
+                    <label for="lastName">Last name:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </span>
+                <br>
+
+                <span class=input>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                </span>
+                <br>
+
+                <span class=input>
+                    <label for="message">Message:</label>
+                    <textarea rows=5 id="message" name="message" required></textarea>
+                </span>
+                <br>
+
+                <input type="submit" name="submitButton" value="Submit">
+            </form>
+        </div>
+
+
+        <div calss="grid-item">
+            <img src="media/grass.jpeg" alt="Picture of grass" />
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">Site by Luke Piscitelli 2021</div>
+    </footer>
+
+</body>
